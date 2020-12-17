@@ -5,12 +5,10 @@
 
     <body>
         <p id="message"> </p>
+        <div id="txt_area"></div>
+
+        <button id="btn_add_field" onclick="add_textarea();" > Add Text Area</button>
         
-
-
-
-
-
 
 
 
@@ -18,14 +16,19 @@
             
             var arr = ['friend 1', 'friend 2', 'friend 3', 'friend 4', 'friend 5'];
 
-            // arr.map(function(value, index){
-            //     console.log(value.toUpperCase());
-            // });
-            
-            arr.map((value, index)=>{
-                var list = document.createElement("li");
-                document.getElementById("message").appendChild(list).innerHTML = value;
+            arr.map(function(value, index){
+                var li = document.createElement("li");
+                document.getElementById("message").appendChild(li).innerHTML = value.toUpperCase();
+                // console.log(value.toUpperCase());
             });
+
+            function add_textarea(){
+                var txtArea = document.createElement("textarea");
+                document.getElementById("txt_area").appendChild(txtArea);
+            }
+
+
+        
 
 
         </script>
