@@ -15,26 +15,17 @@
 
 
         <script>
-            // console.log("Hello world");
-            document.getElementById("message").innerHTML = calculator(20, 10, 'sub');
-
             
-            function calculator(num1, num2, operation){
-                if(operation == 'sub'){
-                    return sub(num1, num2);
-                }else if(operation == 'add'){
-                    return add(num1, num2);
-                }
-            }
+            var arr = ['friend 1', 'friend 2', 'friend 3', 'friend 4', 'friend 5'];
 
-            function sub(num1, num2){
-                return num1 - num2;
-            }
-
-            function add(num1, num2){
-                return num1 + num2;
-            }
-
+            // arr.map(function(value, index){
+            //     console.log(value.toUpperCase());
+            // });
+            
+            arr.map((value, index)=>{
+                var list = document.createElement("li");
+                document.getElementById("message").appendChild(list).innerHTML = value;
+            });
 
 
         </script>
